@@ -1,0 +1,16 @@
+.costs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #C2184E;
+  border-radius: 5px;
+  width: 40vw;
+  margin: 0 auto;
+  padding: 1rem 0.5rem;
+  color: aliceblue;
+}
+
+.costs p {
+  font-size: 1.5rem;
+}
