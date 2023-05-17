@@ -8,12 +8,13 @@ export default function Diagram(props) {
   });
 
   const maxMonthCosts = Math.max(...dataSetsValues);
+ 
 
   return (
     <div className='diagram'>
       {
         props.dataSets.map((dataSet) => {
-          <DiagramBar 
+        return <DiagramBar 
           key={dataSet.id}
           value={dataSet.value} 
           maxValue={maxMonthCosts}

@@ -1,9 +1,10 @@
 .diagram {
   padding: 1rem;
   border-radius: 12px;
-  background-color: #ebc137;
+  background-color: #2a5b84;
   text-align: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 10rem;
+  gap: 1rem;
 }
