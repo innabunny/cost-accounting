@@ -69,7 +69,7 @@ export default function CostForm(props) {
           </div>
           <div className='new-cost__control'>
             <label>Дата</label>
-            <input type='date' min='2019-01-01' step='2023-12-31' value={userInput.date} onChange={dateChangeHandler}/>
+            <input type='date' min="2017-01-01" value={userInput.date} onChange={dateChangeHandler}/>
           </div>
           <div className='new-cost__actions'>
             <button type='submit'>Добавить расход</button>
