@@ -1,7 +1,9 @@
 import './NewCost.css';
 import CostForm from './CostForm';
+import { useState } from 'react';
 
 export default function NewCost(props) {
+  const [isFormVisible, setIsFormVisible] = useState(false);
 
   const saveCostDataHandler = (inputCostData) => {
     const costData = {
@@ -9,17 +11,31 @@ export default function NewCost(props) {
       id: Math.floor(Math.random() * 100)
     }
     props.onAddCost(costData);
+    setIsFormVisible(false);
   }
 
-  const onAddCostHandler = (evt) => {
-    evt.target.style.display = "none";
-    
-  }
+  const inputCostDataHandler = () => {
+    setIsFormVisible(true);
+  };
+
+  const cancelCostHandler = () => {
+    setIsFormVisible(false);
+  };
 
   return(
     <div className='new-cost'>
-      <button onClick={onAddCostHandler}>Добавить новый расход</button>
-      <CostForm onSaveCostData={saveCostDataHandler} />
+      {
+        !isFormVisible && (
+          <button onClick={inputCostDataHandler}>Добавить новый расход</button>
+        )
+      }
+      {
+        isFormVisible && (
+          <CostForm onSaveCostData={saveCostDataHandler} onCancel={cancelCostHandler} />
+        )
+      }
+      
+      
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import './Costs.css';
 import CostFilter from './CostFilter';
+import CostsDiagram from './CostsDiagram';
 import CostItemList from './CostItemList';
 import React, { useState } from 'react';
 
@@ -17,6 +18,7 @@ export default function Costs(props) {
 
   return(
     <div className='costs'>
+      <CostsDiagram costs={filteredCosts} />
        <CostFilter year={selectYear} onChangeYear={onChangeYear} />
        { filteredCosts.length === 0 ? 
        <p>В этом году расходов не было</p> : 
