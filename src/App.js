@@ -15,6 +15,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Приложение для анализа расходов</h1>
       <NewCost onAddCost={addCostHandler} />
       <Costs costs={costsData} />
     </div>
